@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Travel Booking</title>
+    <style>
+        /* Essential Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: sans-serif;
+            background-color: #ffffff;
+            line-height: 1.5;
+            color: #333;
+        }
+
+        /* Accent Color - Green for Go/Action */
+        .accent {
+            color: #4CAF50; 
+        }
+
+        /* Header and Navigation */
+        header {
+            background: #2196F3; /* Basic Blue Header */
+            color: white;
+            padding: 15px;
+            text-align: center;
+        }
+
+        header h1 {
+            margin-bottom: 8px;
+            font-size: 2em;
+        }
+
+        nav ul {
+            list-style: none;
+        }
+
+        nav li {
+            display: inline-block;
+            margin: 0 10px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        /* Section Styling */
+        section {
+            padding: 30px 10px;
+            text-align: center;
+            border-bottom: 1px solid #ccc; /* Simple separator */
+        }
+
+        h2 {
+            color: #2196F3;
+            margin-bottom: 20px;
+            display: inline-block;
+            padding-bottom: 5px;
+        }
+
+        /* --- Tour Packages Section --- */
+        .package-card {
+            background-color: #f0f0f0; /* Light gray card background */
+            width: 90%;
+            margin: 10px auto;
+            padding: 15px;
+            text-align: left;
+        }
+
+        .package-card h3 {
+            color: #D9534F; /* Red accent */
+            margin-bottom: 5px;
+        }
+
+        .package-card strong {
+            display: block;
+            margin-top: 10px;
+            font-size: 1.1em;
+            color: #4CAF50;
+        }
+
+        .booking-button {
+            display: block;
+            width: 100%;
+            padding: 8px;
+            margin-top: 10px;
+            background-color: #4CAF50; /* Green button */
+            color: white;
+            text-decoration: none;
+            text-align: center;
+            border: none;
+        }
+
+        /* --- Gallery Section --- */
+        #gallery {
+            background-color: #eeeeee; /* Darker gray background for gallery */
+        }
+
+        .gallery-item {
+            width: 80%;
+            margin: 15px auto;
+            background-color: #a3ccff; /* Blue background for the box */
+            padding: 10px;
+        }
+
+        /* Styling the IMG tag to act as a visible placeholder */
+        .gallery-item img {
+            width: 100%; /* Take up the container width */
+            height: 200px; /* Fixed height for the placeholder */
+            display: block;
+            margin-bottom: 10px;
+            background-color: #6495ED; /* Secondary color to distinguish the image area */
+            border: 2px solid #004a7c;
+            /* Simple text overlay to represent the content */
+            object-fit: contain; 
+            content: attr(alt); /* Attempts to use alt text as content (CSS trick, not universal) */
+            text-align: center;
+            line-height: 200px;
+            font-size: 1.2em;
+            color: white;
+            font-weight: bold;
+        }
+
+
+        /* --- Booking Form Section --- */
+        .booking-form {
+            text-align: left;
+            padding: 20px;
+            background-color: #f9f9f9;
+            width: 90%;
+            margin: 20px auto;
+        }
+
+        .form-group {
+            margin-bottom: 10px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        .form-group input,
+        .form-group select {
+            width: 100%;
+            padding: 6px;
+            border: 1px solid #ccc;
+        }
+
+        .submit-book {
+            width: 100%;
+            padding: 10px;
+            background-color: #2196F3;
+            color: white;
+            border: none;
+            margin-top: 10px;
+        }
+
+        /* --- Tips Section --- */
+        #tips {
+             text-align: left;
+        }
+
+        #tips ul {
+            list-style: disc;
+            width: 80%;
+            margin: 0 auto;
+            padding-left: 20px;
+        }
+
+        #tips li {
+            padding: 5px 0;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>SIMPLE TRAVEL BOOKING</h1>
+        <nav>
+            <ul>
+                <li><a href="#packages">Tours</a></li>
+                <li><a href="#gallery">Photos</a></li>
+                <li><a href="#book">Book</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Packages Section -->
+    <section id="packages">
+        <h2>Our Tour Packages</h2>
+
+        <div class="package-card">
+            <h3>Europe Adventure</h3>
+            <p>14 days: Paris, Rome, Berlin.</p>
+            <strong>Price: $2,500</strong>
+            <a href="#book" class="booking-button">Book Now</a>
+        </div>
+
+        <div class="package-card">
+            <h3>Himalayan Trek</h3>
+            <p>7-day guided trek.</p>
+            <strong>Price: $950</strong>
+            <a href="#book" class="booking-button">Book Now</a>
+        </div>
+
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery">
+        <h2>Travel Gallery</h2>
+
+        <div class="gallery-item">
+            <!-- Using <img> tag with Base64 src and styled via CSS -->
+            <img src="https://tse4.mm.bing.net/th/id/OIP.heugITkaBNmsKE8myaDIxAHaE8?rs=1&pid=ImgDetMain&o=7&rm=3" 
+                 alt="City View Placeholder Image">
+            <p style="padding: 5px; font-weight: bold;">CITY VIEW PHOTO</p>
+        </div>
+
+        <div class="gallery-item">
+            <!-- Using <img> tag with Base64 src and styled via CSS -->
+            <img src="https://cdn.pixabay.com/photo/2016/06/17/04/26/mountain-1462655_1280.jpg" 
+                 alt="Mountain Range Placeholder Image">
+            <p style="padding: 5px; font-weight: bold;">MOUNTAIN RANGE PHOTO</p>
+        </div>
+    </section>
+
+    <!-- Booking Form Section -->
+    <section id="book">
+        <h2>Book Your Trip</h2>
+        <p>Fill out this simple form to start.</p>
+
+        <form class="booking-form" action="#" method="POST">
+            <div class="form-group">
+                <label for="b_name">Full Name</label>
+                <input type="text" id="b_name" name="b_name" required>
+            </div>
+            <div class="form-group">
+                <label for="b_package">Desired Package</label>
+                <select id="b_package" name="b_package" required>
+                    <option>Europe Adventure</option>
+                    <option>Himalayan Trek</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="b_date">Travel Date</label>
+                <input type="date" id="b_date" name="b_date" required>
+            </div>
+
+            <button type="submit" class="submit-book">Submit Booking</button>
+        </form>
+    </section>
+
+    <!-- Travel Tips Section -->
+    <section id="tips">
+        <h2>Quick Travel Tips</h2>
+        <ul>
+            <li>Always have a photocopy of your passport.</li>
+            <li>Use local transport to save money.</li>
+            <li>Pack a universal adapter for electronics.</li>
+        </ul>
+    </section>
+
+    <footer>
+        <p>Simple Travel Booking | Contact us: travel@book.com</p>
+        <p>&copy; 2024</p>
+    </footer>
+
+</body>
+</html>
